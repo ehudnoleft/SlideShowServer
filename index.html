@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>SlideShow</title>
+    <link rel='stylesheet' href='/assets/stylesheet.css'>
+</head>
+
+<body>
+    <div class='imgbox'>
+        <img id='slide' class='center-fit' src='/assets/pics/christinLaughing.JPG' alt='picture' />
+        <script type='text/javascript'>
+            
+            var image = document.getElementById('slide'); 
+            const imageArray = ['/assets/pics/christinLaughing.JPG', '/assets/pics/kellyLaughing.JPG']; 
+            var currPos = 0; 
+            function setImage() { 
+                if (++currPos >= imageArray.length) { 
+                    currPos = 0; 
+                } 
+                image.src = imageArray[currPos]; 
+            }
+            setInterval(setImage, 5000); 
+        </script>
+    </div>
+</body>
+
+</html>
